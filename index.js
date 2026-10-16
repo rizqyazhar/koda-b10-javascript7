@@ -1,9 +1,8 @@
 const endProg = (angka) => {
+  if (angka === 0) {
+    return console.log("===Program has been ended===");
+  }
   setTimeout(() => {
-    if (angka === 0) {
-      // timer(angka);
-      return;
-    }
     console.log(angka);
     endProg(angka - 1);
   }, 1000);
