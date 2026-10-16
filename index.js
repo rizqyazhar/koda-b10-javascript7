@@ -1,25 +1,12 @@
-let angka = 0;
-const endProg = () => {
+const endProg = (angka) => {
   setTimeout(() => {
-    angka++;
+    if (angka === 0) {
+      // timer(angka);
+      return;
+    }
     console.log(angka);
-    setTimeout(() => {
-      angka++;
-      console.log(angka);
-      setTimeout(() => {
-        angka++;
-        console.log(angka);
-        setTimeout(() => {
-          angka++;
-          console.log(angka);
-          setTimeout(() => {
-            angka++;
-            console.log(angka);
-          }, 1000);
-        }, 1000);
-      }, 1000);
-    }, 1000);
+    endProg(angka - 1);
   }, 1000);
 };
 
-endProg();
+endProg(5);
